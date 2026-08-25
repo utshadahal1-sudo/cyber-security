@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CyberShield - Cybersecurity Awareness Platform">
+  <title>CyberShield | Digital Security Center</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="grid-bg"></div>
+  <div class="particles"></div>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <span class="shield">🛡</span>
+        <span>Cyber<span>Shield</span></span>
+      </div>
+
+      <button class="menu-btn" id="menuBtn">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#threats">Threats</a></li>
+        <li><a href="#scams">Scams</a></li>
+        <li><a href="#phishing">Phishing</a></li>
+        <li><a href="#payments">Payments</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ul>
+
+      <a href="#quiz" class="security-btn">Security Check</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="status">
+          <span></span> SYSTEM PROTECTED
+        </div>
+
+        <h1>
+          Stay Smart.<br>
+          <strong>Stay Cyber Safe.</strong>
+        </h1>
+
+        <p>
+          Learn how to identify online scams, phishing attacks,
+          payment fraud, malicious links and other digital threats.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#threats" class="btn primary">Explore Threats</a>
+          <a href="#quiz" class="btn secondary">Test Your Knowledge</a>
+        </div>
+      </div>
+
+      <div class="cyber-core">
+        <div class="core-ring ring1"></div>
+        <div class="core-ring ring2"></div>
+        <div class="core-ring ring3"></div>
+        <div class="core-shield">🛡</div>
+        <div class="scan-line"></div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD -->
+    <section class="dashboard">
+      <div class="section-heading">
+        <span>SECURITY MONITOR</span>
+        <h2>Cyber Security Dashboard</h2>
+      </div>
+
+      <div class="stats">
+        <div class="stat-card green">
+          <div class="stat-icon">✓</div>
+          <h3 class="counter" data-target="98">0</h3>
+          <p>Security Score</p>
+          <small>Excellent protection</small>
+        </div>
+
+        <div class="stat-card red">
+          <div class="stat-icon">⚠</div>
+          <h3 class="counter" data-target="247">0</h3>
+          <p>Threats Detected</p>
+          <small>Last 30 days</small>
+        </div>
+
+        <div class="stat-card blue">
+          <div class="stat-icon">🔐</div>
+          <h3 class="counter" data-target="1842">0</h3>
+          <p>Accounts Protected</p>
+          <small>Active monitoring</small>
+        </div>
+
+        <div class="stat-card green">
+          <div class="stat-icon">✓</div>
+          <h3 class="counter" data-target="94">0</h3>
+          <p>Safe Transactions</p>
+          <small>Verified activity</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- THREATS -->
+    <section id="threats">
+      <div class="section-heading">
+        <span>THREAT CENTER</span>
+        <h2>Know Your Digital Enemies</h2>
+        <p>Understanding a threat is the first step toward stopping it.</p>
+      </div>
+
+      <div class="threat-grid">
+
+        <article class="threat-card">
+          <div class="threat-icon">🎣</div>
+          <h3>Phishing</h3>
+          <p>Fake messages and websites designed to steal information.</p>
+          <button onclick="showThreat('Phishing')">Learn More</button>
+        </article>
+
+        <article class="threat-card danger">
+          <div class="threat-icon">💳</div>
+          <h3>Payment Scams</h3>
+          <p>Fraud involving fake payments, refunds, QR codes and OTPs.</p>
+          <button onclick="showThreat('Payment Scams')">Learn More</button>
+        </article>
+
+        <article class="threat-card">
+          <div class="threat-icon">📱</div>
+          <h3>SMS Scams</h3>
+          <p>Suspicious texts pretending to come from trusted services.</p>
+          <button onclick="showThreat('SMS Scams')">Learn More</button>
+        </article>
+
+        <article class="threat-card">
+          <div class="threat-icon">🌐</div>
+          <h3>Fake Websites</h3>
+          <p>Websites designed to look legitimate but steal information.</p>
+          <button onclick="showThreat('Fake Websites')">Learn More</button>
+        </article>
+
+        <article class="threat-card danger">
+          <div class="threat-icon">👤</div>
+          <h3>Identity Theft</h3>
+          <p>Criminals using someone else's personal information.</p>
+          <button onclick="showThreat('Identity Theft')">Learn More</button>
+        </article>
+
+        <article class="threat-card">
+          <div class="threat-icon">🧠</div>
+          <h3>Social Engineering</h3>
+          <p>Manipulating people into revealing confidential information.</p>
+          <button onclick="showThreat('Social Engineering')">Learn More</button>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SCAM DETECTOR -->
+    <section id="scams" class="detector">
+      <div class="section-heading">
+        <span>SCAM DETECTOR</span>
+        <h2>Can You Spot The Scam?</h2>
+        <p>Read the fictional message below and identify the danger.</p>
+      </div>
+
+      <div class="message-box">
+        <div class="message-header">
+          <span>● Incoming Message</span>
+          <span>10:42 PM</span>
+        </div>
+
+        <div class="message">
+          <strong>⚠ SECURITY ALERT</strong>
+          <p>
+            Congratulations! Your account has been selected for
+            an exclusive reward. Verify your account immediately
+            using the link below or your reward will expire.
+          </p>
+          <div class="fake-link">secure-account-example.com</div>
+        </div>
+
+        <div class="detector-buttons">
+          <button class="danger-btn" onclick="checkScam(true)">🚨 SCAM</button>
+          <button class="safe-btn" onclick="checkScam(false)">✓ SAFE</button>
+        </div>
+
+        <div id="scamResult"></div>
+      </div>
+    </section>
+
+    <!-- PHISHING -->
+    <section id="phishing">
+      <div class="section-heading">
+        <span>PHISHING LAB</span>
+        <h2>Detect The Phishing Attempt</h2>
+      </div>
+
+      <div class="phishing-card">
+        <div class="email-top">
+          <div class="avatar">B</div>
+          <div>
+            <strong>Bank Security Team</strong>
+            <small>security@example-bank.fake</small>
+          </div>
+        </div>
+
+        <h3>Your account requires immediate verification</h3>
+
+        <p>
+          We detected unusual activity on your account.
+          Please verify your login details immediately to
+          prevent account suspension.
+        </p>
+
+        <div class="suspicious">
+          🔴 Suspicious sender address<br>
+          🔴 Urgent language<br>
+          🔴 Requests login information<br>
+          🔴 Unknown website
+        </div>
+
+        <button class="btn primary" onclick="phishingAnswer()">
+          Analyze Message
+        </button>
+
+        <div id="phishingResult"></div>
+      </div>
+    </section>
+
+    <!-- PAYMENTS -->
+    <section id="payments" class="payments">
+      <div class="section-heading">
+        <span>DIGITAL PAYMENT SAFETY</span>
+        <h2>Protect Your Money Online</h2>
+      </div>
+
+      <div class="payment-grid">
+
+        <div class="payment-card">
+          <span>🔑</span>
+          <h3>Never Share OTP</h3>
+          <p>
+            Legitimate organizations should not ask you to reveal
+            your one-time security codes.
+          </p>
+        </div>
+
+        <div class="payment-card">
+          <span>📷</span>
+          <h3>QR Code Scams</h3>
+          <p>
+            Be careful when scanning unexpected QR codes or
+            accepting unknown payment requests.
+          </p>
+        </div>
+
+        <div class="payment-card">
+          <span>💰</span>
+          <h3>Fake Refunds</h3>
+          <p>
+            Fraudsters may impersonate customer support and
+            offer fake refunds.
+          </p>
+        </div>
+
+        <div class="payment-card">
+          <span>☎</span>
+          <h3>Fake Support</h3>
+          <p>
+            Verify customer-support numbers through official
+            sources before making payments.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="quiz-section">
+      <div class="section-heading">
+        <span>SECURITY QUIZ</span>
+        <h2>Test Your Cyber IQ</h2>
+      </div>
+
+      <div class="quiz-card">
+        <div class="progress">
+          <div id="progressBar"></div>
+        </div>
+
+        <p id="questionNumber">Question 1 of 5</p>
+        <h3 id="question">Should you share an OTP with someone who calls you?</h3>
+
+        <div id="answers" class="answers"></div>
+
+        <div id="quizResult"></div>
+      </div>
+    </section>
+
+    <!-- SAFETY -->
+    <section class="safety">
+      <div class="section-heading">
+        <span>SAFETY PROTOCOL</span>
+        <h2>Remember These Rules</h2>
+      </div>
+
+      <div class="rules">
+        <div>01 <strong>Think Before You Click</strong></div>
+        <div>02 <strong>Never Share OTPs</strong></div>
+        <div>03 <strong>Verify Suspicious Messages</strong></div>
+        <div>04 <strong>Use Strong Passwords</strong></div>
+        <div>05 <strong>Enable Multi-Factor Authentication</strong></div>
+        <div>06 <strong>Report Suspicious Activity</strong></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-logo">🛡 CyberShield</div>
+    <p>Digital Safety & Cybersecurity Awareness Platform</p>
+    <p class="copyright">© 2026 CyberShield. Educational purposes only.</p>
+  </footer>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <button class="close" onclick="closeModal()">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
